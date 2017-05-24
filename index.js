@@ -2,7 +2,7 @@ var async = require('async');
 
 // This function was copied from https://github.com/share/sharedb/issues/45
 // Original implementation by https://github.com/luto
-function getSnapshotAtRevision(docname, v, cb)
+function getSnapshotAtRevision(db, docname, v, cb)
 {
   var snapshot
     , ops = []
@@ -12,7 +12,7 @@ function getSnapshotAtRevision(docname, v, cb)
       // get latest revision
       function (cb)
       {
-        model.getSnapshot(docname,
+        db.getSnapshot(docname,
           function (err, _snapshot)
           {
             snapshot = _snapshot;
@@ -26,7 +26,7 @@ function getSnapshotAtRevision(docname, v, cb)
         if(v == snapshot.v)
           return cb();
 
-        model.getOps(docname, v, snapshot.v,
+        db.getOps(docname, v, snapshot.v,
           function (err, _ops)
           {
             ops = _ops;
