@@ -1,0 +1,26 @@
+{
+  "name": "sharedb-snapshot",
+  "version": "0.0.1",
+  "description": "ShareDB library for fetching historical document snapshots.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/curran/sharedb-snapshot.git"
+  },
+  "keywords": [
+    "ShareDB",
+    "synchronization",
+    "OT",
+    "revision",
+    "control"
+  ],
+  "author": "Curran Kelleher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/curran/sharedb-snapshot/issues"
+  },
+  "homepage": "https://github.com/curran/sharedb-snapshot#readme"
+}

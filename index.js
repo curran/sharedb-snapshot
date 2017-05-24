@@ -1,3 +1,7 @@
+var async = require('async');
+
+// This function was copied from https://github.com/share/sharedb/issues/45
+// Original implementation by https://github.com/luto
 function getSnapshotAtRevision(docname, v, cb)
 {
   var snapshot
